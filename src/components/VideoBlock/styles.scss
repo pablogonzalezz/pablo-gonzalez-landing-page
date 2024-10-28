@@ -1,0 +1,71 @@
+@import "../../styles/styles";
+
+.videoblock {
+  background-color: $dark-base-color;
+  width: 100%;
+  min-height: 60rem;
+  display: flex;
+
+  video {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 60rem;
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 60rem;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .fade-container {
+    display: flex;
+    width: 100%;
+
+    .textblock {
+      .text-container {
+        color: $light-base-color;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        flex-direction: column;
+
+        h6 {
+          text-align: center;
+          color: $light-base-color;
+        }
+
+        .typingBlock {
+          text-align: center;
+          color: $purple-base-color;
+        }
+      }
+
+      margin: auto;
+
+      @media only screen and (max-width: 1280px) {
+        max-width: calc(100% - 98px);
+        padding: 0 30px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        max-width: calc(100% - 68px);
+        padding: 0 30px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        max-width: calc(100% - 38px);
+        padding: 0 18px;
+      }
+
+      @media only screen and (max-width: 414px) {
+        max-width: 100%;
+        padding: 0 18px;
+      }
+    }
+  }
+}

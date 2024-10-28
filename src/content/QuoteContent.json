@@ -1,0 +1,25 @@
+{
+    "quotes": [
+        {
+            "content": "Sem duvidas, um dos meus melhores empregados.",
+            "author": "Elon Musk",
+            "role": "Tesla's CEO",
+            "imageUrl": "https://assets-us-01.kc-usercontent.com/5cb25086-82d2-4c89-94f0-8450813a0fd3/0c3fcefb-bc28-4af6-985e-0c3b499ae832/Elon_Musk_Royal_Society.jpg?fm=jpg&auto=format",
+            "key": 1
+        },
+        {
+            "content": "Brilhante, proativo, reativo. Realmente uma pessoa muito à frente do seu tempo.",
+            "author": "Jeff Bezos",
+            "role": "Amazon's CEO",
+            "imageUrl": "https://m.media-amazon.com/images/M/MV5BNWI4ZTJiZmUtZGI5MC00NTk4LTk2OTYtNDU3NTJiM2QxNzM0XkEyXkFqcGc@._V1_.jpg",
+            "key": 1
+        },
+        {
+            "content": "Um grande funcionario e um grande amigo.",
+            "author": "Mark Zuckerberg",
+            "role": "Meta's CEO",
+            "imageUrl": "https://fortune.com/img-assets/wp-content/uploads/2024/09/GettyImages-2170596573-e1727191861209.jpg?w=1440&q=75",
+            "key": 1
+        }
+    ]
+}

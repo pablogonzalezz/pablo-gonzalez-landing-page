@@ -1,0 +1,21 @@
+.title {
+  margin-top: 5rem;
+}
+
+.card-col {
+  display: flex;
+  justify-content: center;
+
+  .card {
+    width: 140px;
+    transition: width 0.5s;
+
+    &:hover {
+      width: 160px;
+    }
+
+    .meta {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@import "../../styles/styles";
+
+.header {
+  position: fixed;
+  transition: 0.4s;
+  z-index: 999;
+  width: 100%;
+  height: 70px;
+
+  &.active {
+    background: $dark-base-color;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 40px;
+    margin-left: 1.5rem;
+    color: $purple-base-color;
+  }
+
+  img {
+    margin-left: 1rem;
+    max-width: 65px;
+    max-height: 65px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      filter: saturate(20);
+    }
+  }
+}
+
+.navLink {
+  display: inline-block;
+  text-align: center;
+}
+
+.customNavLink {
+  width: 203px;
+  display: inline-block;
+
+  @media only screen and (max-width: 411px) {
+    width: 150px;
+  }
+
+  @media only screen and (max-width: 320px) {
+    width: 118px;
+  }
+}
+
+.burger {
+  @media only screen and (max-width: 890px) {
+    display: flex;
+    margin-right: 1.5rem;
+  }
+
+  display: none;
+
+  svg {
+    fill: $light-base-color;
+  }
+}
+
+.not-hidden {
+  display: flex;
+  align-items: center;
+
+  @media only screen and (max-width: 890px) {
+    display: none;
+  }
+}
+
+.menu {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.customNavLinkSmall {
+  font-size: 1.2rem;
+  color: $light-base-color;
+  transition: color 0.2s ease-in;
+  margin: 0.5rem 2rem;
+
+  @media only screen and (max-width: 890px) {
+    margin: 1.25rem 2rem;
+
+    span {
+      color: $dark-base-color;
+    }
+  }
+}
+
+.label {
+  font-weight: 500;
+  color: $light-base-color;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.outline {
+  font-size: 22px;
+}
+
+.span {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: $light-base-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $purple-base-color;
+    text-underline-position: under;
+    text-decoration: $purple-base-color underline;
+  }
+}

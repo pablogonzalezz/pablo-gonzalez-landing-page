@@ -1,0 +1,40 @@
+{
+    "skillsets":
+    [
+        {
+            "title": "Angular",
+            "description": "Version 14.0.1",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png"
+        },
+        {
+            "title": "React",
+            "description": "Version 18.3.1",
+            "imageUrl": "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png"
+        },
+        {
+            "title": "Typescript",
+            "description": "",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
+        },
+        {
+            "title": "Javascript",
+            "description": "ES6+",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+        },
+        {
+            "title": "Bootstrap",
+            "description": "Version 5.0",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg"
+        },
+        {
+            "title": "Redux",
+            "description": "",
+            "imageUrl": "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo-title-dark.png"
+        },
+        {
+            "title": "RxJS",
+            "description": "",
+            "imageUrl": "https://cdn.worldvectorlogo.com/logos/rxjs-1.svg"
+        }
+    ]
+}

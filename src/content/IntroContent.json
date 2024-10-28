@@ -1,0 +1,22 @@
+{
+  "title": "Hi, I'm Pablo Gonzalez 👋",
+  "sequence": [
+    "Front-end Engineer",
+    1000,
+    "Angular Developer",
+    1000,
+    "React Developer",
+    1000,
+    "Web Developer",
+    1000,
+    "Problem Solver",
+    1000
+  ],
+  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "button": [
+    {
+      "title": "Contact me 📨",
+      "color": "#fff"
+    }
+  ]
+}

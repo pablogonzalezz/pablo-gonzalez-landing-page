@@ -1,0 +1,30 @@
+{
+    "technologies": [
+        {
+            "key": "1",
+            "title": "Lazy Loading",
+            "description": "It loaded pretty fast, right? This site uses lazy loading for dynamically loading the components for better performance and loading time",
+            "code": "// ... \nconst CollapseBlock = lazy(() => import('./components/CollapseBlock'));\n// ..."
+        },
+        {
+            "key": "2",
+            "title": "Responsive",
+            "description": "Try it out on mobile devices! This site was made thinking that you might be navigating through your phone 📱"
+        },
+        {
+            "key": "3",
+            "title": "SEO-friendly",
+            "description": "Found me on Google? That is because this site is optmized for search engines such as Google and Bing."
+        },
+        {
+            "key": "4",
+            "title": "For everyone",
+            "description": "This site contains accessibility features to help assistive technology (e.g. screen readers) and allow people with visual impairments to navigate with no obstacles."
+        },
+        {
+            "key": "5",
+            "title": "Open Source",
+            "description": "Feel free to visit my Github and check out this website repository and other projects."
+        }
+    ]
+}

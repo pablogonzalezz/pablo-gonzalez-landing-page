@@ -1,0 +1,23 @@
+.contact-section {
+  background: whitesmoke;
+
+  .contact-row {
+    width: 100%;
+  }
+
+  .contact-form { 
+    .input-col {
+      // there is a padding 60px for some reason
+      padding: 0 0 0 0 !important;
+    }
+    input,
+    textarea {
+      background-color: white;
+      border: 1px solid lightgray;
+    }
+  }
+}
+
+.error-message {
+  color: crimson;
+}
