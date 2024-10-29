@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/pablo-gonzalez-landing-page/static/css/main.f52d61b8.css",
-    "main.js": "/pablo-gonzalez-landing-page/static/js/main.baa62ffa.js",
+    "main.js": "/pablo-gonzalez-landing-page/static/js/main.ef5f2bab.js",
     "static/js/8375.176cc07f.chunk.js": "/pablo-gonzalez-landing-page/static/js/8375.176cc07f.chunk.js",
     "static/js/5761.8865a8ae.chunk.js": "/pablo-gonzalez-landing-page/static/js/5761.8865a8ae.chunk.js",
     "static/css/8663.1bac7b33.chunk.css": "/pablo-gonzalez-landing-page/static/css/8663.1bac7b33.chunk.css",
-    "static/js/8663.7b345152.chunk.js": "/pablo-gonzalez-landing-page/static/js/8663.7b345152.chunk.js",
+    "static/js/8663.8daf72c2.chunk.js": "/pablo-gonzalez-landing-page/static/js/8663.8daf72c2.chunk.js",
     "static/css/943.1a17347d.chunk.css": "/pablo-gonzalez-landing-page/static/css/943.1a17347d.chunk.css",
     "static/js/943.62beba74.chunk.js": "/pablo-gonzalez-landing-page/static/js/943.62beba74.chunk.js",
     "static/css/3467.45141042.chunk.css": "/pablo-gonzalez-landing-page/static/css/3467.45141042.chunk.css",
     "static/js/3467.537ca7ad.chunk.js": "/pablo-gonzalez-landing-page/static/js/3467.537ca7ad.chunk.js",
     "static/css/9387.c81200cc.chunk.css": "/pablo-gonzalez-landing-page/static/css/9387.c81200cc.chunk.css",
     "static/js/9387.7466ac81.chunk.js": "/pablo-gonzalez-landing-page/static/js/9387.7466ac81.chunk.js",
-    "static/css/3898.3e4c9cbb.chunk.css": "/pablo-gonzalez-landing-page/static/css/3898.3e4c9cbb.chunk.css",
+    "static/css/3898.d9461d1d.chunk.css": "/pablo-gonzalez-landing-page/static/css/3898.d9461d1d.chunk.css",
     "static/js/3898.a37b2bad.chunk.js": "/pablo-gonzalez-landing-page/static/js/3898.a37b2bad.chunk.js",
     "static/css/9928.446c63b3.chunk.css": "/pablo-gonzalez-landing-page/static/css/9928.446c63b3.chunk.css",
     "static/js/9928.28ae5274.chunk.js": "/pablo-gonzalez-landing-page/static/js/9928.28ae5274.chunk.js",
@@ -307,18 +307,18 @@
     "static/js/4619.d5d4e4be.chunk.js": "/pablo-gonzalez-landing-page/static/js/4619.d5d4e4be.chunk.js",
     "index.html": "/pablo-gonzalez-landing-page/index.html",
     "main.f52d61b8.css.map": "/pablo-gonzalez-landing-page/static/css/main.f52d61b8.css.map",
-    "main.baa62ffa.js.map": "/pablo-gonzalez-landing-page/static/js/main.baa62ffa.js.map",
+    "main.ef5f2bab.js.map": "/pablo-gonzalez-landing-page/static/js/main.ef5f2bab.js.map",
     "8375.176cc07f.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/8375.176cc07f.chunk.js.map",
     "5761.8865a8ae.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/5761.8865a8ae.chunk.js.map",
     "8663.1bac7b33.chunk.css.map": "/pablo-gonzalez-landing-page/static/css/8663.1bac7b33.chunk.css.map",
-    "8663.7b345152.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/8663.7b345152.chunk.js.map",
+    "8663.8daf72c2.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/8663.8daf72c2.chunk.js.map",
     "943.1a17347d.chunk.css.map": "/pablo-gonzalez-landing-page/static/css/943.1a17347d.chunk.css.map",
     "943.62beba74.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/943.62beba74.chunk.js.map",
     "3467.45141042.chunk.css.map": "/pablo-gonzalez-landing-page/static/css/3467.45141042.chunk.css.map",
     "3467.537ca7ad.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/3467.537ca7ad.chunk.js.map",
     "9387.c81200cc.chunk.css.map": "/pablo-gonzalez-landing-page/static/css/9387.c81200cc.chunk.css.map",
     "9387.7466ac81.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/9387.7466ac81.chunk.js.map",
-    "3898.3e4c9cbb.chunk.css.map": "/pablo-gonzalez-landing-page/static/css/3898.3e4c9cbb.chunk.css.map",
+    "3898.d9461d1d.chunk.css.map": "/pablo-gonzalez-landing-page/static/css/3898.d9461d1d.chunk.css.map",
     "3898.a37b2bad.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/3898.a37b2bad.chunk.js.map",
     "9928.446c63b3.chunk.css.map": "/pablo-gonzalez-landing-page/static/css/9928.446c63b3.chunk.css.map",
     "9928.28ae5274.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/9928.28ae5274.chunk.js.map",
@@ -614,6 +614,6 @@
   },
   "entrypoints": [
     "static/css/main.f52d61b8.css",
-    "static/js/main.baa62ffa.js"
+    "static/js/main.ef5f2bab.js"
   ]
 }
