@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pablo-gonzalez-landing-page/static/css/main.2ffd255c.css",
-    "main.js": "/pablo-gonzalez-landing-page/static/js/main.7d2ab05e.js",
+    "main.js": "/pablo-gonzalez-landing-page/static/js/main.a784938b.js",
     "static/js/8375.176cc07f.chunk.js": "/pablo-gonzalez-landing-page/static/js/8375.176cc07f.chunk.js",
     "static/js/5761.8865a8ae.chunk.js": "/pablo-gonzalez-landing-page/static/js/5761.8865a8ae.chunk.js",
     "static/css/8663.d854e01d.chunk.css": "/pablo-gonzalez-landing-page/static/css/8663.d854e01d.chunk.css",
@@ -307,7 +307,7 @@
     "static/js/4619.d5d4e4be.chunk.js": "/pablo-gonzalez-landing-page/static/js/4619.d5d4e4be.chunk.js",
     "index.html": "/pablo-gonzalez-landing-page/index.html",
     "main.2ffd255c.css.map": "/pablo-gonzalez-landing-page/static/css/main.2ffd255c.css.map",
-    "main.7d2ab05e.js.map": "/pablo-gonzalez-landing-page/static/js/main.7d2ab05e.js.map",
+    "main.a784938b.js.map": "/pablo-gonzalez-landing-page/static/js/main.a784938b.js.map",
     "8375.176cc07f.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/8375.176cc07f.chunk.js.map",
     "5761.8865a8ae.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/5761.8865a8ae.chunk.js.map",
     "8663.d854e01d.chunk.css.map": "/pablo-gonzalez-landing-page/static/css/8663.d854e01d.chunk.css.map",
@@ -614,6 +614,6 @@
   },
   "entrypoints": [
     "static/css/main.2ffd255c.css",
-    "static/js/main.7d2ab05e.js"
+    "static/js/main.a784938b.js"
   ]
 }
