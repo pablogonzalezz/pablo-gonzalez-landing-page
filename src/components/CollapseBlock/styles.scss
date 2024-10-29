@@ -1,0 +1,22 @@
+@import "../../styles/styles";
+
+.collapse-section {
+  display: flex;
+  background: $gray-base-color;
+
+  h6 {
+    text-align: center;
+  }
+
+  .collapse {
+    min-width: 20rem;
+    font-size: 18px;
+  }
+
+  .code-block {
+    font-family: "Roboto";
+    color: white !important;
+  }
+}
+
+
