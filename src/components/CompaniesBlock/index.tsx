@@ -18,7 +18,7 @@ const CompaniesBlock = ({}) => {
       <div className="scroller-container">
         <div className="scroller">
           {companyData.map((company) => (
-            <Image src={company.imageUrl} className="logo"></Image>
+            <Image src={company.imageUrl} className="logo" key={company.key}></Image>
           ))}
         </div>
       </div>

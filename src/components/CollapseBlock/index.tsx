@@ -24,7 +24,6 @@ const CollapseBlock = ({}) => {
         <Row
           justify="center"
           align="middle"
-          gutter={[50, 50]}
         >
           <Col xl={12} md={12} xs={24}>
             <h6>Performance Matters 🚀</h6>

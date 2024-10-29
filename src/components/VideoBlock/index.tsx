@@ -16,7 +16,7 @@ const VideoBlock = () => {
 
   return (
     <section className="videoblock" id="intro">
-      <video src="img/intro-video.mp4" autoPlay muted loop></video>
+      <video src="img/intro-video.mp4" autoPlay muted loop playsInline></video>
       <div className="overlay"></div>
       <Fade direction={"right"} triggerOnce className="fade-container">
         <Row justify="center" align="middle" className="textblock">

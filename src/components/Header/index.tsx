@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
@@ -20,7 +20,9 @@ const Header = ({ t }: { t: TFunction }) => {
     }
   };
 
-  window.addEventListener("scroll", changeBackgroundColor);
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackgroundColor, true);
+  }, []);
 
   const toggleButton = () => {
     setVisibility(!visible);
@@ -77,7 +79,7 @@ const Header = ({ t }: { t: TFunction }) => {
           <Row justify="space-between" align="middle">
             <Col>
               <Link to="/" aria-label="homepage" className="logo-container">
-                <Image src="https://i.pinimg.com/originals/71/c4/14/71c41419a3a25b09742aaf3dc648bb11.png"></Image>
+                <Image src="img/logos/logo.png" key={1}></Image>
               </Link>
             </Col>
             <Col>
@@ -89,7 +91,7 @@ const Header = ({ t }: { t: TFunction }) => {
               <MenuOutlined className="outline" />
             </div>
           </Row>
-          <Drawer closable={false} open={visible} onClose={toggleButton}>
+          <Drawer open={visible} onClose={toggleButton}>
             <Col style={{ marginBottom: "2.5rem", zIndex: 9999999 }}>
               <span className="label" onClick={toggleButton}>
                 <Col span={12}>

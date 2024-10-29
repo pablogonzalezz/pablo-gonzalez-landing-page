@@ -39,4 +39,5 @@ export interface validateProps {
 export interface ImageProps {
   src: string;
   className?: string;
+  key: number;
 }

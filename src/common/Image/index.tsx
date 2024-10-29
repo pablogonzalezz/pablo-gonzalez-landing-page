@@ -3,9 +3,9 @@ import { ImageProps } from "../types";
 import { Suspense } from "react";
 import { Spin } from "antd";
 
-const Image = ({ src, className }: ImageProps) => (
+const Image = ({ src, className, key }: ImageProps) => (
   <Suspense fallback={<Spin spinning={true}></Spin>}>
-    <img src={src} className={className}></img>
+    <img src={src} className={className} key={key}></img>
   </Suspense>
 );
 

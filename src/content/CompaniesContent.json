@@ -2,83 +2,103 @@
   "logos": [
     {
       "title": "NewHotel",
-      "imageUrl": "img/logos/newhotel.png"
+      "imageUrl": "img/logos/newhotel.png",
+      "key": 1
     },
     {
       "title": "Dell LEAD",
-      "imageUrl": "img/logos/dell-lead.png"
+      "imageUrl": "img/logos/dell-lead.png",
+      "key": 2
     },
     {
       "title": "mDoc",
-      "imageUrl": "img/logos/mdoc.png"
+      "imageUrl": "img/logos/mdoc.png",
+      "key": 3
     },
     {
       "title": "Log'issimo",
-      "imageUrl": "img/logos/logissimo.png"
+      "imageUrl": "img/logos/logissimo.png",
+      "key": 4
     },
     {
       "title": "RastroSystem",
-      "imageUrl": "img/logos/rastrosystem.png"
+      "imageUrl": "img/logos/rastrosystem.png",
+      "key": 5
     },
     {
       "title": "NewHotel",
-      "imageUrl": "img/logos/newhotel.png"
+      "imageUrl": "img/logos/newhotel.png",
+      "key": 6
     },
     {
       "title": "Dell LEAD",
-      "imageUrl": "img/logos/dell-lead.png"
+      "imageUrl": "img/logos/dell-lead.png",
+      "key": 7
     },
     {
       "title": "mDoc",
-      "imageUrl": "img/logos/mdoc.png"
+      "imageUrl": "img/logos/mdoc.png",
+      "key": 8
     },
     {
       "title": "Log'issimo",
-      "imageUrl": "img/logos/logissimo.png"
+      "imageUrl": "img/logos/logissimo.png",
+      "key": 9
     },
     {
       "title": "RastroSystem",
-      "imageUrl": "img/logos/rastrosystem.png"
+      "imageUrl": "img/logos/rastrosystem.png",
+      "key": 10
     },
     {
       "title": "NewHotel",
-      "imageUrl": "img/logos/newhotel.png"
+      "imageUrl": "img/logos/newhotel.png",
+      "key": 11
     },
     {
       "title": "Dell LEAD",
-      "imageUrl": "img/logos/dell-lead.png"
+      "imageUrl": "img/logos/dell-lead.png",
+      "key": 12
     },
     {
       "title": "mDoc",
-      "imageUrl": "img/logos/mdoc.png"
+      "imageUrl": "img/logos/mdoc.png",
+      "key": 13
     },
     {
       "title": "Log'issimo",
-      "imageUrl": "img/logos/logissimo.png"
+      "imageUrl": "img/logos/logissimo.png",
+      "key": 14
     },
     {
       "title": "RastroSystem",
-      "imageUrl": "img/logos/rastrosystem.png"
+      "imageUrl": "img/logos/rastrosystem.png",
+      "key": 15
     },
     {
       "title": "NewHotel",
-      "imageUrl": "img/logos/newhotel.png"
+      "imageUrl": "img/logos/newhotel.png",
+      "key": 16
     },
     {
       "title": "Dell LEAD",
-      "imageUrl": "img/logos/dell-lead.png"
+      "imageUrl": "img/logos/dell-lead.png",
+      "key": 17
     },
     {
       "title": "mDoc",
-      "imageUrl": "img/logos/mdoc.png"
+      "imageUrl": "img/logos/mdoc.png",
+      "key": 18
     },
     {
       "title": "Log'issimo",
-      "imageUrl": "img/logos/logissimo.png"
+      "imageUrl": "img/logos/logissimo.png",
+      "key": 19
     },
     {
       "title": "RastroSystem",
-      "imageUrl": "img/logos/rastrosystem.png"
+      "imageUrl": "img/logos/rastrosystem.png",
+      "key": 20
     }
   ]
 }

@@ -24,6 +24,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 body {
@@ -34,7 +35,6 @@ body {
   background: $light-cream-color;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow-x: hidden;
 }
 
 a:hover {
@@ -110,8 +110,4 @@ a {
   flex-direction: column;
   text-align: left;
   padding-top: 1.5rem;
-}
-
-.ant-drawer-content-wrapper {
-  width: 300px !important;
 }

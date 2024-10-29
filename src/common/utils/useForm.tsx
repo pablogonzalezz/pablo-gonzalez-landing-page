@@ -22,7 +22,7 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     errors: { ...initialValues },
   });
 
-  const [isLoading, setLoading] = useState<boolean>();
+  const [isLoading, setLoading] = useState<boolean>(false);
 
   const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
