@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pablo-gonzalez-landing-page/static/css/main.b4dedc65.css",
-    "main.js": "/pablo-gonzalez-landing-page/static/js/main.cf2cf49f.js",
+    "main.js": "/pablo-gonzalez-landing-page/static/js/main.e356e0b1.js",
     "static/js/8375.176cc07f.chunk.js": "/pablo-gonzalez-landing-page/static/js/8375.176cc07f.chunk.js",
     "static/js/5761.8865a8ae.chunk.js": "/pablo-gonzalez-landing-page/static/js/5761.8865a8ae.chunk.js",
     "static/css/8663.406923bb.chunk.css": "/pablo-gonzalez-landing-page/static/css/8663.406923bb.chunk.css",
@@ -17,7 +17,7 @@
     "static/css/9928.446c63b3.chunk.css": "/pablo-gonzalez-landing-page/static/css/9928.446c63b3.chunk.css",
     "static/js/9928.28ae5274.chunk.js": "/pablo-gonzalez-landing-page/static/js/9928.28ae5274.chunk.js",
     "static/css/4262.dd4defaa.chunk.css": "/pablo-gonzalez-landing-page/static/css/4262.dd4defaa.chunk.css",
-    "static/js/4262.4fc2cbd1.chunk.js": "/pablo-gonzalez-landing-page/static/js/4262.4fc2cbd1.chunk.js",
+    "static/js/4262.a1c57601.chunk.js": "/pablo-gonzalez-landing-page/static/js/4262.a1c57601.chunk.js",
     "static/js/2525.c0459888.chunk.js": "/pablo-gonzalez-landing-page/static/js/2525.c0459888.chunk.js",
     "react-syntax-highlighter/refractor-core-import.js": "/pablo-gonzalez-landing-page/static/js/react-syntax-highlighter/refractor-core-import.c0cb56cf.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js": "/pablo-gonzalez-landing-page/static/js/react-syntax-highlighter_languages_refractor_abap.77b7d210.chunk.js",
@@ -307,7 +307,7 @@
     "static/js/4619.d5d4e4be.chunk.js": "/pablo-gonzalez-landing-page/static/js/4619.d5d4e4be.chunk.js",
     "index.html": "/pablo-gonzalez-landing-page/index.html",
     "main.b4dedc65.css.map": "/pablo-gonzalez-landing-page/static/css/main.b4dedc65.css.map",
-    "main.cf2cf49f.js.map": "/pablo-gonzalez-landing-page/static/js/main.cf2cf49f.js.map",
+    "main.e356e0b1.js.map": "/pablo-gonzalez-landing-page/static/js/main.e356e0b1.js.map",
     "8375.176cc07f.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/8375.176cc07f.chunk.js.map",
     "5761.8865a8ae.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/5761.8865a8ae.chunk.js.map",
     "8663.406923bb.chunk.css.map": "/pablo-gonzalez-landing-page/static/css/8663.406923bb.chunk.css.map",
@@ -323,7 +323,7 @@
     "9928.446c63b3.chunk.css.map": "/pablo-gonzalez-landing-page/static/css/9928.446c63b3.chunk.css.map",
     "9928.28ae5274.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/9928.28ae5274.chunk.js.map",
     "4262.dd4defaa.chunk.css.map": "/pablo-gonzalez-landing-page/static/css/4262.dd4defaa.chunk.css.map",
-    "4262.4fc2cbd1.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/4262.4fc2cbd1.chunk.js.map",
+    "4262.a1c57601.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/4262.a1c57601.chunk.js.map",
     "2525.c0459888.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/2525.c0459888.chunk.js.map",
     "refractor-core-import.c0cb56cf.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/react-syntax-highlighter/refractor-core-import.c0cb56cf.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.77b7d210.chunk.js.map": "/pablo-gonzalez-landing-page/static/js/react-syntax-highlighter_languages_refractor_abap.77b7d210.chunk.js.map",
@@ -614,6 +614,6 @@
   },
   "entrypoints": [
     "static/css/main.b4dedc65.css",
-    "static/js/main.cf2cf49f.js"
+    "static/js/main.e356e0b1.js"
   ]
 }
