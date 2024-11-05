@@ -30,7 +30,7 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     const errors = validate(values);
     setFormState((prevState) => ({ ...prevState, errors }));
 
-    const url = "https://formsubmit.co/pablojuangonzalez@hotmail.com"; // Fill in your API URL here
+    const url = "https://formsubmit.co/contact@pablogonzalez.pt"; // Fill in your API URL here
 
     try {
       setLoading(true);

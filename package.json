@@ -1,7 +1,7 @@
 {
   "name": "pablo-gonzalez-landing-page",
   "version": "0.1.0",
-  "homepage": "https://pablogonzalezz.github.io/pablo-gonzalez-landing-page",
+  "homepage": "https://pablogonzalezz.github.io",
   "private": true,
   "dependencies": {
     "@types/node": "^15.14.9",
