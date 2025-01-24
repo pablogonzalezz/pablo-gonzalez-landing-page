@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
-import { Switch, Route, HashRouter } from "react-router-dom";
+import { Route, HashRouter} from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import routes from "./config";
 import { Spin } from "antd";
+import Blog from "../pages/Blog";
 
 const Router = () => {
   return (
@@ -23,6 +23,11 @@ const Router = () => {
           path={["/", "/home"]}
           exact={true}
           component={lazy(() => import(`../pages/Home`))}
+        />
+        <Route
+          path={"/blog/:filename/"}
+          exact={true}
+          component={lazy(() => import(`../pages/Blog`))}
         />
       </HashRouter>
       <Footer />

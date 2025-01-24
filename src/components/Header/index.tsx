@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
-import Container from "../../common/Container";
 import { Button } from "../../common/Button";
 import "./styles.scss";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 import Image from "../../common/Image";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
+  const isBlog: boolean = useLocation().hash.includes("#/blog");
 
   const changeBackgroundColor = () => {
     if (window.scrollY > 70) {
@@ -39,25 +39,25 @@ const Header = ({ t }: { t: TFunction }) => {
     return (
       <>
         <div className="customNavLinkSmall" onClick={() => scrollTo("about")}>
-          <span className="span">{t("About")}</span>
+          <span className={isBlog ? "hidden" : "span"}>{t("About")}</span>
         </div>
         <div
           className="customNavLinkSmall"
           onClick={() => scrollTo("skillset")}
         >
-          <span className="span">{t("Skillset")}</span>
+          <span className={isBlog ? "hidden" : "span"}>{t("Skillset")}</span>
         </div>
         <div
           className="customNavLinkSmall"
           onClick={() => scrollTo("performance")}
         >
-          <span className="span">{t("Performance")}</span>
+          <span className={isBlog ? "hidden" : "span"}>{t("Performance")}</span>
         </div>
         <div
           className="customNavLinkSmall"
           onClick={() => scrollTo("testimonials")}
         >
-          <span className="span">{t("Testimonials")}</span>
+          <span className={isBlog ? "hidden" : "span"}>{t("Testimonials")}</span>
         </div>
         <div
           className="customNavLinkSmall"

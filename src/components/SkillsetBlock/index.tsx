@@ -1,5 +1,5 @@
 import { Row, Col, Card, Spin } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
+import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import Meta from "antd/lib/card/Meta";
 import { Suspense, useEffect, useState } from "react";

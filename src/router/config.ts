@@ -4,6 +4,11 @@ const routes = [
     exact: true,
     component: "Home",
   },
+  {
+    path: ["/blog/:filename"],
+    exact: true,
+    component: "Blog",
+  },
 ];
 
 export default routes;
