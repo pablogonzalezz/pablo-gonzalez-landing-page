@@ -3,7 +3,7 @@ import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { Button } from "../../common/Button";
 import "./styles.scss";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { MenuOutlined } from "@ant-design/icons";
 import Image from "../../common/Image";
 
@@ -78,9 +78,9 @@ const Header = ({ t }: { t: TFunction }) => {
         <Col lg={20} md={24} sm={24} xs={24}>
           <Row justify="space-between" align="middle">
             <Col>
-              <Link to="/" aria-label="homepage" className="logo-container">
+              <a href="/#/home" aria-label="homepage" className="logo-container">
                 <Image src="img/logos/logo.png" key={1}></Image>
-              </Link>
+              </a>
             </Col>
             <Col>
               <div className="not-hidden">

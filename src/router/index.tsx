@@ -3,7 +3,6 @@ import { Route, HashRouter} from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Spin } from "antd";
-import Blog from "../pages/Blog";
 
 const Router = () => {
   return (
