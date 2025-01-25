@@ -6,6 +6,7 @@ import AuthorBlock from "../../components/AuthorBlock";
 import { BlogPost } from "./types";
 import BlogPostContent from "../../content/BlogPostsContent.json";
 import BlogPostsBlock from "../../components/BlogPostsBlock";
+import { title } from "process";
 
 const fetchMarkdownFile = async (filename: string): Promise<string> => {
   const response = await fetch(`markdown/${filename}.md`);
@@ -42,6 +43,7 @@ const Blog: React.FC = () => {
         const allPostInfo: BlogPost[] = BlogPostContent;
         const postInfo = allPostInfo.find((post: any) => post.id === filename);
         setPostInfo(postInfo);
+        document.title = postInfo?.title || "Blog Post";
       } catch (error) {
         console.error("Error loading post info:", error);
       }
