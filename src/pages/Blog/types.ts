@@ -4,4 +4,5 @@ export interface BlogPost {
   publishDate: string;
   description: string;
   imageUrl: string;
+  isNew?: boolean;
 }
