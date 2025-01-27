@@ -55,9 +55,9 @@ const Header = ({ t }: { t: TFunction }) => {
         </div>
         <div
           className="customNavLinkSmall"
-          onClick={() => scrollTo("testimonials")}
+          onClick={() => scrollTo("blog")}
         >
-          <span className={isBlog ? "hidden" : "span"}>{t("Testimonials")}</span>
+          <span className={isBlog ? "hidden" : "span"}>{t("Blog")}</span>
         </div>
         <div
           className="customNavLinkSmall"

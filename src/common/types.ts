@@ -41,3 +41,7 @@ export interface ImageProps {
   className?: string;
   key: number;
 }
+
+export interface IFrameProps {
+  src: string;
+}
