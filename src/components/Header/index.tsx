@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import { Row, Col, Drawer } from "antd";
+import { Row, Col, Drawer, Switch } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import { Button } from "../../common/Button";
 import "./styles.scss";
 import { useLocation } from "react-router-dom";
-import { MenuOutlined } from "@ant-design/icons";
+import { MenuOutlined, MoonFilled, SunFilled, SunOutlined } from "@ant-design/icons";
 import Image from "../../common/Image";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(false);
   const isBlog: boolean = useLocation().hash.includes("#/blog");
 
   const changeBackgroundColor = () => {
@@ -19,6 +20,18 @@ const Header = ({ t }: { t: TFunction }) => {
       setHeaderVisible(false);
     }
   };
+
+  const toggleDarkTheme = (checked: boolean) => {
+    setDarkTheme(checked);
+  }
+
+  useEffect(() => {
+    if (darkTheme) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [darkTheme]);
 
   useEffect(() => {
     window.addEventListener("scroll", changeBackgroundColor, true);
@@ -59,6 +72,10 @@ const Header = ({ t }: { t: TFunction }) => {
         >
           <span className={isBlog ? "hidden" : "span"}>{t("Blog")}</span>
         </div>
+        <Switch onChange={toggleDarkTheme} checked={darkTheme} className="customNavLinkSmall"
+          checkedChildren={<MoonFilled  style={{color: "black"}}  />}
+          unCheckedChildren={<SunFilled style={{color: "white"}}/>}
+        />  
         <div
           className="customNavLinkSmall"
           style={{ width: "180px", marginTop: "0px" }}

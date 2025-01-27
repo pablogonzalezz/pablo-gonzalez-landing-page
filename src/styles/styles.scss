@@ -111,3 +111,88 @@ a {
   text-align: left;
   padding-top: 1.5rem;
 }
+
+body.dark {
+  color: $light-base-color;
+  background: $dark-base-color;
+  transition: all 0.3s ease-in-out;
+
+  a {
+    color: $light-base-color;
+    transition: color 0.3s ease-in-out;
+
+    :hover {
+      color: $purple-dark-color;
+    }
+  }
+
+  li {
+    color: $light-base-color;
+    transition: color 0.3s ease-in-out;
+  }
+
+  input,
+  textarea {
+    background: $gray-dark-color;
+    color: $light-base-color;
+    transition: all 0.3s ease-in-out;
+
+    :focus-within {
+      box-shadow: $purple-dark-color 0px 0px 0px 1px;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $light-base-color;
+    transition: color 0.3s ease-in-out;
+  }
+
+  p {
+    color: $light-base-color;
+    transition: color 0.3s ease-in-out;
+  }
+
+  section {
+    background: $dark-base-color;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .ant-card-body {
+    background: $dark-base-color;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .card {
+    background: none;
+    color: $light-base-color;
+    transition: all 0.3s ease-in-out;
+
+    .ant-card {
+      background: $dark-base-color;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .ant-card-meta-title {
+      color: $light-base-color;
+      transition: color 0.3s ease-in-out;
+    }
+    .ant-card-meta-description {
+      color: $light-base-color;
+      transition: color 0.3s ease-in-out;
+    }
+
+    a {
+      color: $purple-base-color;
+      transition: color 0.3s ease-in-out;
+
+      :hover {
+        color: $purple-dark-color;
+      }
+    }
+  }
+}
