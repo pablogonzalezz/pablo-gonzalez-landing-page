@@ -4,7 +4,7 @@ import { withTranslation, TFunction } from "react-i18next";
 import { Button } from "../../common/Button";
 import "./styles.scss";
 import { useLocation } from "react-router-dom";
-import { MenuOutlined, MoonFilled, SunFilled, SunOutlined } from "@ant-design/icons";
+import { MenuOutlined, MoonFilled, SunFilled } from "@ant-design/icons";
 import Image from "../../common/Image";
 
 const Header = ({ t }: { t: TFunction }) => {
