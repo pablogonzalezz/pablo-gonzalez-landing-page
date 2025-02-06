@@ -5,4 +5,5 @@ export interface BlogPost {
   description: string;
   imageUrl: string;
   isNew?: boolean;
+  videoUrl?: string;
 }

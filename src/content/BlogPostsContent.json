@@ -1,10 +1,19 @@
 [
   {
+    "id": "o-que-e-deepseek-chatgpt-perdeu-emprego",
+    "title": "O que é o DeepSeek e como o ChatGPT “perdeu o emprego”",
+    "publishDate": "February 03, 2025",
+    "description": "Como a chinesa DeepSeek está revolucionando o mercado de IA's e como isso afeta o ChatGPT.",
+    "isNew": true,
+    "imageUrl": "markdown/o-que-e-deepseek-chatgpt-perdeu-emprego/cover.webp",
+    "videoUrl": "https://www.youtube.com/embed/F_eAputbFI8?si=2e_UbTlibJJ7j2oi"
+  },
+  {
     "id": "7-frameworks-frontend",
     "title": "7 Frameworks Frontend para aprender em 2025 e conseguir um emprego 🚀",
     "publishDate": "January 24, 2025",
     "description": "Aprenda os 7 frameworks frontend mais populares em 2025 e consiga um emprego.",
     "imageUrl": "markdown/7-frameworks-frontend/image.png",
-    "isNew": true
+    "videoUrl": "https://www.youtube.com/embed/9VcWkkIckb0?si=FJ-xCQqqb-gMUkvV"
   }
 ]

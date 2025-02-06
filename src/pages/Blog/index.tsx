@@ -7,6 +7,7 @@ import { BlogPost } from "./types";
 import BlogPostContent from "../../content/BlogPostsContent.json";
 import BlogPostsBlock from "../../components/BlogPostsBlock";
 import { title } from "process";
+import IFrame from "../../common/IFrame";
 
 const fetchMarkdownFile = async (filename: string): Promise<string> => {
   const response = await fetch(`markdown/${filename}.md`);
@@ -60,6 +61,8 @@ const Blog: React.FC = () => {
         <AuthorBlock publishDate={postInfo?.publishDate} />
       </div>
       <hr className="separator-line" />
+      {postInfo?.videoUrl ? 
+        <IFrame src={postInfo?.videoUrl}></IFrame> : null}
       <ReactMarkdown>{content}</ReactMarkdown>
       <hr className="separator-line" />
       <BlogPostsBlock title={"Other posts"}></BlogPostsBlock>
