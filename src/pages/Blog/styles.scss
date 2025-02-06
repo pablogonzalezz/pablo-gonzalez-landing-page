@@ -274,3 +274,30 @@
   border-radius: 50%;
   margin-right: 15px;
 }
+
+.not-found {
+  text-align: center;
+  padding: 50px 20px;
+
+  h1 {
+    font-size: 3em;
+    color: #444;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+  }
+
+  a {
+    font-size: 1em;
+    color: #007bff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
