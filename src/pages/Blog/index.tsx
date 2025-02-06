@@ -1,73 +1,65 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import "./styles.scss";
 import AuthorBlock from "../../components/AuthorBlock";
-import { BlogPost } from "./types";
-import BlogPostContent from "../../content/BlogPostsContent.json";
 import BlogPostsBlock from "../../components/BlogPostsBlock";
-import { title } from "process";
 import IFrame from "../../common/IFrame";
-
-const fetchMarkdownFile = async (filename: string): Promise<string> => {
-  const response = await fetch(`markdown/${filename}.md`);
-  if (!response.ok) {
-    throw new Error("Network response was not ok");
-  }
-  return response.text();
-};
+import useGetPostInfo from "../../hooks/useGetPostInfo";
+import useGetMarkdownFile from "../../hooks/useGetMarkdownFile";
+import { Skeleton } from "antd";
 
 const Blog: React.FC = () => {
   const { filename } = useParams<{ filename: string }>();
-  const [content, setContent] = useState<string>("");
-  const [postInfo, setPostInfo] = useState<BlogPost>();
+  const content = useGetMarkdownFile(filename);
+  const postInfo = useGetPostInfo(filename);
 
-  useEffect(() => {
-    const loadMarkdown = async () => {
-      try {
-        const markdownContent = await fetchMarkdownFile(filename);
-        setContent(markdownContent);
-      } catch (error) {
-        console.error("Error loading markdown file:", error);
-        setContent("# Error\nCould not load the blog post.");
-      }
-    };
-
-    if (filename) {
-      loadMarkdown();
-    }
-  }, [filename]);
-
-  useEffect(() => {
-    const loadPostInfo = async () => {
-      try {
-        const allPostInfo: BlogPost[] = BlogPostContent;
-        const postInfo = allPostInfo.find((post: any) => post.id === filename);
-        setPostInfo(postInfo);
-        document.title = postInfo?.title || "Blog Post";
-      } catch (error) {
-        console.error("Error loading post info:", error);
-      }
-    };
-
-    if (filename) {
-      loadPostInfo();
-    }
-  }, [filename]);
-
-  return (
-    <div className="blog-container">
-      <div className="blog-meta">
-        <AuthorBlock publishDate={postInfo?.publishDate} />
+  // If the content is not loaded yet, show a loading skeleton
+  if (!content) {
+    return (
+      <div className="blog-container">
+        <div className="blog-meta">
+          <Skeleton active avatar paragraph={{ rows: 2 }} />
+        </div>
+        <hr className="separator-line" />
+        {postInfo?.videoUrl ?
+          <Skeleton.Image /> : null}
+        <Skeleton active paragraph={{ rows: 10 }} />
+        <hr className="separator-line" />
+        <BlogPostsBlock title={"Other posts"}></BlogPostsBlock>
       </div>
-      <hr className="separator-line" />
-      {postInfo?.videoUrl ? 
-        <IFrame src={postInfo?.videoUrl}></IFrame> : null}
-      <ReactMarkdown>{content}</ReactMarkdown>
-      <hr className="separator-line" />
-      <BlogPostsBlock title={"Other posts"}></BlogPostsBlock>
-    </div>
-  );
+    );
+    // If the post info is not loaded yet, show a not found message
+  } else if (!postInfo) {
+    return (
+      <div className="blog-container">
+        <div className="not-found">
+          <hr className="separator-line" />
+          <h1>Post not found 😔</h1>
+          <p>It seems like the post you are looking for does not exist.</p>
+          <a href="#/home">Go back to the home page</a>
+          <hr className="separator-line" />
+        </div>
+        <BlogPostsBlock title={"Other posts"}></BlogPostsBlock>
+      </div>
+    );
+  }
+  else {
+    return (
+      <div className="blog-container">
+        <div className="blog-meta">
+          <AuthorBlock publishDate={postInfo?.publishDate} />
+        </div>
+        <hr className="separator-line" />
+        {postInfo?.videoUrl ?
+          <IFrame src={postInfo?.videoUrl}></IFrame> : null}
+        <ReactMarkdown>{content}</ReactMarkdown>
+        <hr className="separator-line" />
+        <BlogPostsBlock title={"Other posts"}></BlogPostsBlock>
+      </div>
+    );
+  }
+
 };
 
 export default Blog;
