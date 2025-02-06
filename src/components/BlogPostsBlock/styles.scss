@@ -1,0 +1,45 @@
+.thumbnail {
+  height: auto;
+  border-radius: 4px;
+  max-width: 10em !important;
+  object-fit: contain;
+  margin-right: 1em;
+}
+
+.home-page-thumbnail {
+  height: auto;
+  border-radius: 4px;
+  max-width: 20em !important;
+  object-fit: contain;
+  margin-right: 1em;
+}
+
+.home-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  max-width: 240px;
+  margin: 2em;
+}
+
+.post-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 20em;
+  max-width: 40em;
+  margin: 2em;
+}
+
+.ribbon {
+  overflow: hidden;
+  text-align: right;
+  margin: 30px;
+
+  &.hidden {
+    display: none;
+  }
+}
