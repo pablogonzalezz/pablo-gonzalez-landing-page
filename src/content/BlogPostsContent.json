@@ -1,10 +1,18 @@
 [
   {
+    "id": "6-dicas-javascript",
+    "title": "As 6 Coisas Que Eu Queria Ter Sabido Quando Era um Dev Júnior",
+    "publishDate": "February 09, 2025",
+    "description": "6 dicas que vão te ajudar a escrever código mais limpo em Javascript.",
+    "isNew": true,
+    "imageUrl": "markdown/6-dicas-javascript/cover.jpg",
+    "videoUrl": "https://www.youtube.com/embed/YQ4fSfVCdmY?si=-KNo-CUESPj6TRIT"
+  },
+  {
     "id": "o-que-e-deepseek-chatgpt-perdeu-emprego",
     "title": "O que é o DeepSeek e como o ChatGPT “perdeu o emprego”",
     "publishDate": "February 03, 2025",
     "description": "Como a chinesa DeepSeek está revolucionando o mercado de IA's e como isso afeta o ChatGPT.",
-    "isNew": true,
     "imageUrl": "markdown/o-que-e-deepseek-chatgpt-perdeu-emprego/cover.webp",
     "videoUrl": "https://www.youtube.com/embed/F_eAputbFI8?si=2e_UbTlibJJ7j2oi"
   },
