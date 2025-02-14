@@ -3,20 +3,20 @@
 .videoblock {
   background-color: $dark-base-color;
   width: 100%;
-  min-height: 60rem;
+  min-height: 100vh;
   display: flex;
 
   video {
     object-fit: cover;
     position: absolute;
     width: 100%;
-    height: 60rem;
+    height: 100vh;
   }
 
   .overlay {
     position: absolute;
     width: 100%;
-    height: 60rem;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
   }
 
