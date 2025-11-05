@@ -14,6 +14,16 @@ const Blog: React.FC = () => {
   const content = useGetMarkdownFile(filename);
   const postInfo = useGetPostInfo(filename);
 
+  // navigate to top when component is mounted
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // navigate to top when filename changes
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [filename]);
+
   // If the content is not loaded yet, show a loading skeleton
   if (!content) {
     return (

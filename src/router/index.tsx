@@ -3,8 +3,11 @@ import { Route, HashRouter} from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Spin } from "antd";
+import useGetAllPosts from "../hooks/useGetAllPosts";
 
 const Router = () => {
+  const paths = useGetAllPosts()?.map((post) => ({params: {id: post.id}}));
+
   return (
     <Suspense
       fallback={
@@ -28,6 +31,14 @@ const Router = () => {
           exact={true}
           component={lazy(() => import(`../pages/Blog`))}
         />
+        {paths?.map((path) =>(
+          <Route 
+          path={`/blog/${path}`}
+          exact={true}
+          component={lazy(() => import(`../pages/Blog`))}
+          />
+          )
+        )}
       </HashRouter>
       <Footer />
     </Suspense>

@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
 import BlogPostsBlock from "../../components/BlogPostsBlock";
 
 const Container = lazy(() => import("../../common/Container"));
@@ -12,6 +12,11 @@ const Contact = lazy(() => import("../../components/ContactForm"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 
 const Home = () => {
+  // scroll to top when the component loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Container>
       <ScrollToTop />
