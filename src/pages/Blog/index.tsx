@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
 import "./styles.scss";
 import AuthorBlock from "../../components/AuthorBlock";
 import BlogPostsBlock from "../../components/BlogPostsBlock";
@@ -8,6 +7,19 @@ import IFrame from "../../common/IFrame";
 import useGetPostInfo from "../../hooks/useGetPostInfo";
 import useGetMarkdownFile from "../../hooks/useGetMarkdownFile";
 import { Skeleton } from "antd";
+import CustomMarkdown from "../../common/Markdown";
+import { ArticleJsonLd } from "next-seo";
+
+function createUtterancesContainer(issueTerm: string) {
+  const script = document.createElement("script");
+  script.src = "https://utteranc.es/client.js";
+  script.setAttribute("repo", "pablogonzalezz/pablo-gonzalez-landing-page");
+  script.setAttribute("issue-term", issueTerm);
+  script.setAttribute("theme", "preferred-color-scheme");
+  script.crossOrigin = "anonymous";
+  script.async = true;
+  document.getElementById("utterances-container")?.appendChild(script);
+}
 
 const Blog: React.FC = () => {
   const { filename } = useParams<{ filename: string }>();
@@ -23,6 +35,15 @@ const Blog: React.FC = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [filename]);
+
+  // Utterances comments integration
+  React.useEffect(() => {
+    // Clear previous comments
+    if (document.getElementById("utterances-container")?.innerHTML) {
+      document.getElementById("utterances-container")!.innerHTML = "";
+    }
+    createUtterancesContainer(postInfo?.id || "");
+  }, [content]);
 
   // If the content is not loaded yet, show a loading skeleton
   if (!content) {
@@ -56,17 +77,32 @@ const Blog: React.FC = () => {
   }
   else {
     return (
-      <div className="blog-container">
-        <div className="blog-meta">
-          <AuthorBlock publishDate={postInfo?.publishDate} />
-        </div>
-        <hr className="separator-line" />
-        {postInfo?.videoUrl ?
-          <IFrame src={postInfo?.videoUrl}></IFrame> : null}
-        <ReactMarkdown>{content}</ReactMarkdown>
-        <hr className="separator-line" />
-        <BlogPostsBlock title={"Other posts"}></BlogPostsBlock>
-      </div>
+      <>
+        <ArticleJsonLd
+          headline={postInfo?.title}
+          datePublished={postInfo?.publishDate}
+          author={[{
+            name: "Pablo Gonzalez",
+          }]}
+          image={[postInfo?.imageUrl]}
+          description={postInfo?.description}
+          url={`https://pablomorales.dev/#/blog/${filename}`}
+        />
+        <article>
+          <div className="blog-container">
+            <div className="blog-meta">
+              <AuthorBlock publishDate={postInfo?.publishDate} />
+            </div>
+            <hr className="separator-line" />
+            {postInfo?.videoUrl ?
+              <IFrame src={postInfo?.videoUrl}></IFrame> : null}
+            <CustomMarkdown markdown={content} />
+            <div id="utterances-container"></div>
+            <hr className="separator-line" />
+            <BlogPostsBlock title={"Other posts"}></BlogPostsBlock>
+          </div>
+        </article>
+      </>
     );
   }
 
