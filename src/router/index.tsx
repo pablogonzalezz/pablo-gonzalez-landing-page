@@ -22,8 +22,8 @@ const Router = () => {
         ></Spin>
       }
     >
-      <Header />
       <HashRouter>
+        <Header />
         {routes.map((route) => (
           <Route
             key={route.component}
@@ -32,8 +32,8 @@ const Router = () => {
             component={pages[route.component]}
           />
         ))}
+        <Footer />
       </HashRouter>
-      <Footer />
     </Suspense>
   );
 };
