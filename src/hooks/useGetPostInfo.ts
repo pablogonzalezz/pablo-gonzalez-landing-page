@@ -9,7 +9,7 @@ const useGetPostInfo = (postId: string) => {
   useEffect(() => {
     const loadPostInfo = async () => {
       try {
-        const postInfo = allPostInfo?.find((post: any) => post.id === postId);
+        const postInfo = allPostInfo?.find((post: BlogPost) => post.id === postId);
         setPostInfo(postInfo);
         document.title = postInfo?.title || "Blog Post";
       } catch (error) {

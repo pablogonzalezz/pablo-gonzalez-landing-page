@@ -3,20 +3,22 @@ import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
 import { TypeAnimation } from "react-type-animation";
 import "./styles.scss";
-import { useEffect, useState } from "react";
 import IntroContent from "../../content/IntroContent.json";
 import { VideoBlockProps } from "./types";
 
 const VideoBlock = () => {
-  const [introData, setIntroData] = useState<VideoBlockProps>();
-
-  useEffect(() => {
-    setIntroData(IntroContent);
-  }, []);
+  const introData: VideoBlockProps = IntroContent;
 
   return (
     <section className="videoblock" id="intro">
-      <video src="img/intro-video.mp4" autoPlay muted loop playsInline></video>
+      <video
+        src="img/intro-video.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      ></video>
       <div className="overlay"></div>
       <Fade direction={"right"} triggerOnce className="fade-container">
         <Row justify="center" align="middle" className="textblock">

@@ -3,7 +3,6 @@ import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import "./styles.scss";
 import Image from "../../common/Image";
-import { Link } from "react-router-dom";
 import { Button } from "../../common/Button";
 
 interface SocialLinkProps {
@@ -36,8 +35,8 @@ const Footer = () => {
         >
           <Col lg={8} md={12} sm={12} xs={12}>
           <a href="/#/home" aria-label="homepage">
-            <Image src="img/logos/logo.png" className="footer-logo" key={1}></Image>
-          </a>        
+            <Image src="img/logos/logo.png" alt="Pablo Gonzalez logo" className="footer-logo" />
+          </a>
           </Col>
           <Col lg={8} md={12} sm={12} xs={12}>
             <span>Made with ❤️ by Pablo Gonzalez</span>

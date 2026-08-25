@@ -1,22 +1,8 @@
-import { useEffect, useState } from "react";
 import { BlogPost } from "../pages/Blog/types";
 import BlogPostContent from "../content/BlogPostsContent.json";
 
-const useGetAllPosts = () => {
-	const [postInfo, setPostInfo] = useState<BlogPost[]>();
+const posts: BlogPost[] = BlogPostContent;
 
-	useEffect(() => {
-		const loadPostInfo = async () => {
-			try {
-				setPostInfo(BlogPostContent);
-			} catch (error) {
-				console.error("Error loading post info:", error);
-			}
-		};
-		loadPostInfo();
-	}, []);
-
-	return postInfo;
-};
+const useGetAllPosts = () => posts;
 
 export default useGetAllPosts;

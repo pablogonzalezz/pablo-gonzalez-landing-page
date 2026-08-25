@@ -8,22 +8,26 @@ import { Button } from "../../common/Button";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
 import "./styles.scss";
-import { Suspense, useEffect, useState } from "react";
 import ContactContent from "../../content/ContactContent.json";
+
+interface FormErrors {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const ValidationType = ({
+  type,
+  errors,
+}: ValidationTypeProps & { errors: FormErrors }) => {
+  const ErrorMessage = errors[type as keyof FormErrors];
+  return <span className="error-message">{ErrorMessage}</span>;
+};
 
 const Contact = () => {
   const { values, errors, handleChange, handleSubmit, isLoading } =
     useForm(validate);
-  const [contactData, setContactData] = useState<{ title: string }>();
-
-  useEffect(() => {
-    setContactData(ContactContent);
-  }, []);
-
-  const ValidationType = ({ type }: ValidationTypeProps) => {
-    const ErrorMessage = errors[type as keyof typeof errors];
-    return <span className="error-message">{ErrorMessage}</span>;
-  };
+  const contactData: { title: string } = ContactContent;
 
   return (
     <section id="contact" className="contact-section">
@@ -49,7 +53,7 @@ const Contact = () => {
                     value={values.name || ""}
                     onChange={handleChange}
                   />
-                  <ValidationType type="name" />
+                  <ValidationType type="name" errors={errors} />
                 </Col>
                 <Col className="input-col">
                   <Input
@@ -59,7 +63,7 @@ const Contact = () => {
                     value={values.email || ""}
                     onChange={handleChange}
                   />
-                  <ValidationType type="email" />
+                  <ValidationType type="email" errors={errors} />
                 </Col>
                 <Col className="input-col">
                   <TextArea
@@ -68,7 +72,7 @@ const Contact = () => {
                     name="message"
                     onChange={handleChange}
                   />
-                  <ValidationType type="message" />
+                  <ValidationType type="message" errors={errors} />
                 </Col>
                 <Row justify="center" align="middle">
                   <Button name="submit">{"Submit"}</Button>

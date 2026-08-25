@@ -1,5 +1,5 @@
-import { Row, Col, Card, Collapse, CollapseProps } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
+import { Row, Col, Collapse } from "antd";
+import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { useEffect, useState } from "react";
 import TechnologyContent from "../../content/TechnologyContent.json";
@@ -8,7 +8,7 @@ import CollapsePanel from "antd/lib/collapse/CollapsePanel";
 import { CodeBlock, dracula } from "react-code-blocks";
 import "./styles.scss";
 
-const CollapseBlock = ({}) => {
+const CollapseBlock = () => {
   const [technologyData, setTechnologyData] = useState<Technology[]>([]);
 
   useEffect(() => {

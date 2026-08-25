@@ -1,13 +1,16 @@
-import { lazy, Suspense } from "react";
-import { Route, HashRouter} from "react-router-dom";
+import { ComponentType, lazy, LazyExoticComponent, Suspense } from "react";
+import { Route, HashRouter } from "react-router-dom";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Spin } from "antd";
-import useGetAllPosts from "../hooks/useGetAllPosts";
+import routes from "./config";
+
+const pages: Record<string, LazyExoticComponent<ComponentType<any>>> = {
+  Home: lazy(() => import("../pages/Home")),
+  Blog: lazy(() => import("../pages/Blog")),
+};
 
 const Router = () => {
-  const paths = useGetAllPosts()?.map((post) => ({params: {id: post.id}}));
-
   return (
     <Suspense
       fallback={
@@ -21,24 +24,14 @@ const Router = () => {
     >
       <Header />
       <HashRouter>
-        <Route
-          path={["/", "/home"]}
-          exact={true}
-          component={lazy(() => import(`../pages/Home`))}
-        />
-        <Route
-          path={"/blog/:filename/"}
-          exact={true}
-          component={lazy(() => import(`../pages/Blog`))}
-        />
-        {paths?.map((path) =>(
-          <Route 
-          path={`/blog/${path}`}
-          exact={true}
-          component={lazy(() => import(`../pages/Blog`))}
+        {routes.map((route) => (
+          <Route
+            key={route.component}
+            path={route.path}
+            exact={route.exact}
+            component={pages[route.component]}
           />
-          )
-        )}
+        ))}
       </HashRouter>
       <Footer />
     </Suspense>

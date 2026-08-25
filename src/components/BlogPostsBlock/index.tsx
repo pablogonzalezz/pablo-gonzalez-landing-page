@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { BlogPostsBlockProps } from "./types";
 import { BlogPost } from "../../pages/Blog/types";
 
@@ -17,9 +16,9 @@ const BlogPostsBlock = ({ title, isHomePage }: BlogPostsBlockProps) => {
       <div className="other-posts">
         <h2>{title}</h2>
         <ul className="post-list">
-          {posts?.map((post: BlogPost, index: number) => (
+          {posts?.map((post: BlogPost) => (
             <li key={post.id} className="post-item">
-              <Image src={post.imageUrl} key={index} className="thumbnail"></Image>
+              <Image src={post.imageUrl} alt={post.title} className="thumbnail" />
               <div className="post-info">
                 <a href={`#/blog/${post.id}`}><h3 className="post-title">{post.title}</h3></a>
                 <p className="post-description">
@@ -42,10 +41,10 @@ const BlogPostsBlock = ({ title, isHomePage }: BlogPostsBlockProps) => {
                   <h6>{title}</h6>
                 </Row>
                 <Row justify={"center"} align={"middle"}>
-                  {posts?.map((post: BlogPost, index: number) => (
-                    <Col lg={6} md={12} sm={12} xs={24} className="post-card" key={index}>
+                  {posts?.map((post: BlogPost) => (
+                    <Col lg={6} md={12} sm={12} xs={24} className="post-card" key={post.id}>
                       <Badge.Ribbon text={"New"} color="blue" className={post.isNew ? "ribbon" : "ribbon hidden"} placement="start">
-                        <Card className="home-posts" hoverable cover={<Image src={post.imageUrl} key={index} className="home-page-thumbnail"></Image>}>
+                        <Card className="home-posts" hoverable cover={<Image src={post.imageUrl} alt={post.title} className="home-page-thumbnail" />}>
                           <a href={`#/blog/${post.id}`}>
                             <p>{post.title}</p>
                             <span>{post.description}</span>

@@ -1,24 +1,23 @@
-import { Row, Col, Spin } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
-import { Suspense, useEffect, useState } from "react";
-import CompaniesContent from "../../content/CompaniesContent.json";
 import "./styles.scss";
+import CompaniesContent from "../../content/CompaniesContent.json";
 import { Company } from "./types";
 import Image from "../../common/Image";
+import { withTranslation } from "react-i18next";
 
-const CompaniesBlock = ({}) => {
-  const [companyData, setCompanyData] = useState<Company[]>([]);
-
-  useEffect(() => {
-    setCompanyData(CompaniesContent.logos);
-  }, []);
+const CompaniesBlock = () => {
+  const companyData: Company[] = CompaniesContent.logos;
 
   return (
     <section className="scroller-section">
       <div className="scroller-container">
         <div className="scroller">
           {companyData.map((company) => (
-            <Image src={company.imageUrl} className="logo" key={company.key}></Image>
+            <Image
+              src={company.imageUrl}
+              alt={company.title}
+              className="logo"
+              key={company.key}
+            />
           ))}
         </div>
       </div>

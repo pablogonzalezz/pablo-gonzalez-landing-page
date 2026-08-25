@@ -3,7 +3,13 @@ import "./styles.scss";
 
 export const Button = ({ children, onClick, link }: ButtonProps) =>
   link ? (
-    <a href={link} target="_blank" className="styled-button" onClick={onClick}>
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="styled-button"
+      onClick={onClick}
+    >
       {children}
     </a>
   ) : (

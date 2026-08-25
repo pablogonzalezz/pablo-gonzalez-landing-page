@@ -1,15 +1,14 @@
 import { lazy, useEffect } from "react";
 import BlogPostsBlock from "../../components/BlogPostsBlock";
+import Container from "../../common/Container";
+import Intro from "../../components/VideoBlock";
+import CompaniesBlock from "../../components/CompaniesBlock";
+import AboutBlock from "../../components/AboutBlock";
+import ScrollToTop from "../../common/ScrollToTop";
 
-const Container = lazy(() => import("../../common/Container"));
-const Intro = lazy(() => import("../../components/VideoBlock"));
-const CompaniesBlock = lazy(() => import("../../components/CompaniesBlock"));
-const AboutBlock = lazy(() => import("../../components/AboutBlock"));
 const SkillsetBlock = lazy(() => import("../../components/SkillsetBlock"));
 const CollapseBlock = lazy(() => import("../../components/CollapseBlock"));
-const QuoteBlock = lazy(() => import("../../components/QuoteBlock"));
 const Contact = lazy(() => import("../../components/ContactForm"));
-const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 
 const Home = () => {
   // scroll to top when the component loads
@@ -26,7 +25,6 @@ const Home = () => {
       <SkillsetBlock />
       <CollapseBlock />
       <BlogPostsBlock title="My recent posts" isHomePage />
-      {/* <QuoteBlock /> */}
       <Contact />
     </Container>
   );

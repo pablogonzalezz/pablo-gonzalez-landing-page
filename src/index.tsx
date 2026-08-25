@@ -1,14 +1,8 @@
-import { BrowserRouter } from "react-router-dom";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import "antd/dist/antd.css";
 import "./styles/styles.scss";
 
 import Router from "./router";
 
-const App = () => (
-  <BrowserRouter>
-    <Router />
-  </BrowserRouter>
-);
-
-ReactDOM.render(<App />, document.getElementById("root"));
+const root = createRoot(document.getElementById("root") as HTMLElement);
+root.render(<Router />);

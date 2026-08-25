@@ -3,7 +3,7 @@ import { Popover } from "antd";
 import { withTranslation } from "react-i18next";
 import "./styles.scss";
 
-const AuthorBlock = ({publishDate}: any) => {
+const AuthorBlock = ({ publishDate }: { publishDate?: string }) => {
   return (
     <Popover
       overlayStyle={{ width: 300 }}

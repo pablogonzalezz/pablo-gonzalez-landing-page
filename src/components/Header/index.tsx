@@ -7,6 +7,47 @@ import { useLocation } from "react-router-dom";
 import { MenuOutlined, MoonFilled, SunFilled } from "@ant-design/icons";
 import Image from "../../common/Image";
 
+interface MenuItemProps {
+  t: TFunction;
+  isBlog: boolean;
+  darkTheme: boolean;
+  toggleDarkTheme: (checked: boolean) => void;
+  scrollTo: (id: string) => void;
+}
+
+const MenuItem = ({ t, isBlog, darkTheme, toggleDarkTheme, scrollTo }: MenuItemProps) => (
+  <>
+    <div className="customNavLinkSmall" onClick={() => scrollTo("about")}>
+      <span className={isBlog ? "hidden" : "span"}>{t("About")}</span>
+    </div>
+    <div className="customNavLinkSmall" onClick={() => scrollTo("skillset")}>
+      <span className={isBlog ? "hidden" : "span"}>{t("Skillset")}</span>
+    </div>
+    <div className="customNavLinkSmall" onClick={() => scrollTo("performance")}>
+      <span className={isBlog ? "hidden" : "span"}>{t("Performance")}</span>
+    </div>
+    <div className="customNavLinkSmall" onClick={() => scrollTo("blog")}>
+      <span className={isBlog ? "hidden" : "span"}>{t("Blog")}</span>
+    </div>
+    <Switch
+      onChange={toggleDarkTheme}
+      checked={darkTheme}
+      className="customNavLinkSmall"
+      checkedChildren={<MoonFilled style={{ color: "black" }} />}
+      unCheckedChildren={<SunFilled style={{ color: "white" }} />}
+    />
+    <div
+      className="customNavLinkSmall"
+      style={{ width: "180px", marginTop: "0px" }}
+      onClick={() => scrollTo("contact")}
+    >
+      <span className="span">
+        <Button>{t("Contact")}</Button>
+      </span>
+    </div>
+  </>
+);
+
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
@@ -34,59 +75,25 @@ const Header = ({ t }: { t: TFunction }) => {
   }, [darkTheme]);
 
   useEffect(() => {
-    window.addEventListener("scroll", changeBackgroundColor, true);
+    window.addEventListener("scroll", changeBackgroundColor, {
+      capture: true,
+      passive: true,
+    });
+    return () => {
+      window.removeEventListener("scroll", changeBackgroundColor, true);
+    };
   }, []);
 
   const toggleButton = () => {
     setVisibility(!visible);
   };
 
-  const MenuItem = () => {
-    const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-      setVisibility(false);
-    };
-    return (
-      <>
-        <div className="customNavLinkSmall" onClick={() => scrollTo("about")}>
-          <span className={isBlog ? "hidden" : "span"}>{t("About")}</span>
-        </div>
-        <div
-          className="customNavLinkSmall"
-          onClick={() => scrollTo("skillset")}
-        >
-          <span className={isBlog ? "hidden" : "span"}>{t("Skillset")}</span>
-        </div>
-        <div
-          className="customNavLinkSmall"
-          onClick={() => scrollTo("performance")}
-        >
-          <span className={isBlog ? "hidden" : "span"}>{t("Performance")}</span>
-        </div>
-        <div
-          className="customNavLinkSmall"
-          onClick={() => scrollTo("blog")}
-        >
-          <span className={isBlog ? "hidden" : "span"}>{t("Blog")}</span>
-        </div>
-        <Switch onChange={toggleDarkTheme} checked={darkTheme} className="customNavLinkSmall"
-          checkedChildren={<MoonFilled  style={{color: "black"}}  />}
-          unCheckedChildren={<SunFilled style={{color: "white"}}/>}
-        />  
-        <div
-          className="customNavLinkSmall"
-          style={{ width: "180px", marginTop: "0px" }}
-          onClick={() => scrollTo("contact")}
-        >
-          <span className="span">
-            <Button>{t("Contact")}</Button>
-          </span>
-        </div>
-      </>
-    );
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id) as HTMLDivElement;
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+    setVisibility(false);
   };
 
   return (
@@ -96,12 +103,18 @@ const Header = ({ t }: { t: TFunction }) => {
           <Row justify="space-between" align="middle">
             <Col>
               <a href="/#/home" aria-label="homepage" className="logo-container">
-                <Image src="img/logos/logo.png" key={1}></Image>
+                <Image src="img/logos/logo.png" alt="Pablo Gonzalez logo" />
               </a>
             </Col>
             <Col>
               <div className="not-hidden">
-                <MenuItem />
+                <MenuItem
+                  t={t}
+                  isBlog={isBlog}
+                  darkTheme={darkTheme}
+                  toggleDarkTheme={toggleDarkTheme}
+                  scrollTo={scrollTo}
+                />
               </div>
             </Col>
             <div className="burger" onClick={toggleButton}>
@@ -116,7 +129,13 @@ const Header = ({ t }: { t: TFunction }) => {
                 </Col>
               </span>
             </Col>
-            <MenuItem />
+            <MenuItem
+              t={t}
+              isBlog={isBlog}
+              darkTheme={darkTheme}
+              toggleDarkTheme={toggleDarkTheme}
+              scrollTo={scrollTo}
+            />
           </Drawer>
         </Col>
       </Row>

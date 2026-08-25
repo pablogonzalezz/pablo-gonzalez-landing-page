@@ -1,4 +1,4 @@
-import { Row, Col, Card, Collapse, CollapseProps, Avatar } from "antd";
+import { Row, Col, Avatar } from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { useEffect, useState } from "react";
@@ -6,7 +6,7 @@ import QuoteContent from "../../content/QuoteContent.json";
 import "./styles.scss";
 import { Quote } from "./types";
 
-const QuoteBlock = ({}) => {
+const QuoteBlock = () => {
   const [quoteData, setQuoteData] = useState<Quote[]>([]);
 
   useEffect(() => {

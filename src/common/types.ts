@@ -38,8 +38,8 @@ export interface validateProps {
 
 export interface ImageProps {
   src: string;
+  alt: string;
   className?: string;
-  key: number;
 }
 
 export interface IFrameProps {

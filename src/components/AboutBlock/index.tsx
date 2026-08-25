@@ -1,24 +1,20 @@
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
 import AboutContent from "../../content/AboutContent.json";
 import "./styles.scss";
 
 const SkillsetBlock = () => {
-  const [aboutData, setAboutData] = useState<{ title: string; text: string }>();
-  const [aboutTextData, setAboutTextData] = useState<string>();
+  const aboutData: { title: string; text: string } = AboutContent.about;
 
-  useEffect(() => {
-    setAboutData(AboutContent.about);
-  }, []);
-
-  useEffect(() => {
+  const aboutTextData = useMemo(() => {
     const yearsOfExperience =
       new Date().getFullYear() - new Date("01/01/2019").getFullYear();
 
-    setAboutTextData(
-      aboutData?.text.replace(":yearsOfExperience", String(yearsOfExperience))
+    return aboutData.text.replace(
+      ":yearsOfExperience",
+      String(yearsOfExperience)
     );
   }, [aboutData]);
 
