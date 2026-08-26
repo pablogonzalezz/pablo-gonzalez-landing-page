@@ -31,7 +31,7 @@ function process(a, b, c) {
 
 **Depois (mais legível e modularizado):**
 
-```javascript
+```jsx
 function sum(a, b) {
   return a + b;
 }
