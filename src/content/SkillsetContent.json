@@ -4,7 +4,7 @@
         {
             "title": "Angular",
             "description": "Version 14.0.1",
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png"
+            "imageUrl": "https://angular.dev/assets/images/press-kit/angular_icon_gradient.gif"
         },
         {
             "title": "React",
@@ -14,7 +14,7 @@
         {
             "title": "Typescript",
             "description": "",
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
+            "imageUrl": "https://images.icon-icons.com/2415/PNG/512/typescript_original_logo_icon_146317.png"
         },
         {
             "title": "Javascript",
@@ -35,6 +35,11 @@
             "title": "RxJS",
             "description": "",
             "imageUrl": "https://cdn.worldvectorlogo.com/logos/rxjs-1.svg"
+        },
+        {
+            "title": "Claude Code",
+            "description": "Version 2.1.246",
+            "imageUrl": "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/claudecode-color.png"
         }
     ]
 }
