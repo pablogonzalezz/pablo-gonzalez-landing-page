@@ -68,7 +68,7 @@ const Blog: React.FC = () => {
           <hr className="separator-line" />
           <h1>Post not found 😔</h1>
           <p>It seems like the post you are looking for does not exist.</p>
-          <a href="#/home">Go back to the home page</a>
+          <a href="/home">Go back to the home page</a>
           <hr className="separator-line" />
         </div>
         <BlogPostsBlock title={"Other posts"}></BlogPostsBlock>
@@ -86,7 +86,7 @@ const Blog: React.FC = () => {
           }]}
           image={[postInfo?.imageUrl]}
           description={postInfo?.description}
-          url={`https://pablomorales.dev/#/blog/${filename}`}
+          url={`https://pablomorales.dev/blog/${filename}`}
         />
         <article>
           <div className="blog-container">
