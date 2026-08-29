@@ -35,8 +35,8 @@ const Footer = () => {
           style={{ margin: "2rem 2rem" }}
         >
           <Col lg={8} md={12} sm={12} xs={12}>
-          <a href="/#/home" aria-label="homepage">
-            <Image src="img/logos/logo.png" className="footer-logo" key={1}></Image>
+          <a href="/home" aria-label="homepage">
+            <Image src="/img/logos/logo.png" className="footer-logo" key={1}></Image>
           </a>        
           </Col>
           <Col lg={8} md={12} sm={12} xs={12}>

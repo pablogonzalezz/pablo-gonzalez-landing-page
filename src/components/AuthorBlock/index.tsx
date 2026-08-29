@@ -9,7 +9,7 @@ const AuthorBlock = ({publishDate}: any) => {
       overlayStyle={{ width: 300 }}
       content={
         <div>
-          <img src="img/author.jpg" alt="Author" className="author-picture" />
+          <img src="/img/author.jpg" alt="Author" className="author-picture" />
           <br></br>
           <strong>Pablo Gonzalez</strong>
           <br></br>
@@ -32,7 +32,7 @@ const AuthorBlock = ({publishDate}: any) => {
         </div>
       }
     >
-      <img src="img/author.jpg" alt="Author" className="author-picture" />
+      <img src="/img/author.jpg" alt="Author" className="author-picture" />
       <div className="author-info">
         <p className="author-name">Pablo Gonzalez</p>
         <p className="publish-date">Published on {publishDate}</p>

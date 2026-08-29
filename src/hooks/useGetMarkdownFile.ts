@@ -4,7 +4,7 @@ const useGetMarkdownFile = (path: string) => {
   const [content, setContent] = useState<string>("");
   useEffect(() => {
     const fetchMarkdownFile = async (filename: string): Promise<string> => {
-      const response = await fetch(`markdown/${filename}.md`);
+      const response = await fetch(`/markdown/${filename}.md`);
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

@@ -11,7 +11,7 @@ const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(false);
   const [darkTheme, setDarkTheme] = useState(false);
-  const isBlog: boolean = useLocation().hash.includes("#/blog");
+  const isBlog: boolean = useLocation().pathname.includes("/blog"); 
 
   const changeBackgroundColor = () => {
     if (window.scrollY > 70) {
@@ -95,8 +95,8 @@ const Header = ({ t }: { t: TFunction }) => {
         <Col lg={20} md={24} sm={24} xs={24}>
           <Row justify="space-between" align="middle">
             <Col>
-              <a href="/#/home" aria-label="homepage" className="logo-container">
-                <Image src="img/logos/logo.png" key={1}></Image>
+              <a href="/home" aria-label="homepage" className="logo-container">
+                <Image src="/img/logos/logo.png" key={1}></Image>
               </a>
             </Col>
             <Col>

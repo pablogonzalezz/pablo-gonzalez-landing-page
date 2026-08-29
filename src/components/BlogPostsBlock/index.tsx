@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { BlogPostsBlockProps } from "./types";
 import { BlogPost } from "../../pages/Blog/types";
 
@@ -21,7 +20,7 @@ const BlogPostsBlock = ({ title, isHomePage }: BlogPostsBlockProps) => {
             <li key={post.id} className="post-item">
               <Image src={post.imageUrl} key={index} className="thumbnail"></Image>
               <div className="post-info">
-                <a href={`#/blog/${post.id}`}><h3 className="post-title">{post.title}</h3></a>
+                <a href={`/blog/${post.id}`}><h3 className="post-title">{post.title}</h3></a>
                 <p className="post-description">
                   {post.description}
                 </p>
@@ -46,7 +45,7 @@ const BlogPostsBlock = ({ title, isHomePage }: BlogPostsBlockProps) => {
                     <Col lg={6} md={12} sm={12} xs={24} className="post-card" key={index}>
                       <Badge.Ribbon text={"New"} color="blue" className={post.isNew ? "ribbon" : "ribbon hidden"} placement="start">
                         <Card className="home-posts" hoverable cover={<Image src={post.imageUrl} key={index} className="home-page-thumbnail"></Image>}>
-                          <a href={`#/blog/${post.id}`}>
+                          <a href={`/blog/${post.id}`}>
                             <p>{post.title}</p>
                             <span>{post.description}</span>
                           </a>
