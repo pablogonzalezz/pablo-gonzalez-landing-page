@@ -1,10 +1,18 @@
 [
+    {
+    "id": "desenvolvi-minha-propria-ia",
+    "title": "Como criei uma IA que toca música de graça e superei os desafios de arquitetura serverless",
+    "publishDate": "September 29, 2026",
+    "description": "Mais do que uma aplicação de reprodução de música, este projeto nasceu como um autêntico laboratório de arquitetura para testar os limites técnicos das tecnologias de IA atuais em produção.",
+    "isNew": true,
+    "imageUrl": "/markdown/desenvolvi-minha-propria-ia/cover.png"
+  },
   {
     "id": "6-dicas-javascript",
     "title": "As 6 Coisas Que Eu Queria Ter Sabido Quando Era um Dev Júnior",
     "publishDate": "February 09, 2025",
     "description": "6 dicas que vão te ajudar a escrever código mais limpo em Javascript.",
-    "isNew": true,
+    "isNew": false,
     "imageUrl": "/markdown/6-dicas-javascript/cover.jpg",
     "videoUrl": "https://www.youtube.com/embed/YQ4fSfVCdmY?si=-KNo-CUESPj6TRIT"
   },
